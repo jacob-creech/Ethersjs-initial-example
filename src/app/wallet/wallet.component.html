@@ -1,29 +1,5 @@
-<div fxFlex="20"></div>
-<div fxFlex="60" class="wallet">
-  <button mat-raised-button color="primary" (click)="onSubmit()">Generate Wallet</button>
-  <p *ngIf="publickey">Public Key: {{publickey}}</p>
-  <p *ngIf="privatekey">Private Key: {{privatekey}}</p>
+<div fxFlex="30"></div>
+<div fxFlex="40" class="wallet">
+	Initial Application
 </div>
-<div>
-	<form [formGroup]="transactionForm" (ngSubmit)="sendTransaction(transactionForm.value)">
-        <mat-form-field appearance="outline">
-        <mat-label>To</mat-label>
-        <input formControlName="toAddress" matInput placeholder="0xAddress">
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Amount</mat-label>
-        <input formControlName="etherAmount" matInput placeholder="1">
-        <span matSuffix>Ether</span>
-      </mat-form-field>
-        <button mat-raised-button color="secondary">Send Transaction</button>
-    </form>
-    <form [formGroup]="contractForm" (ngSubmit)="addToContract(contractForm.value)">
-        <mat-form-field appearance="outline">
-        <mat-label>Value</mat-label>
-        <input formControlName="value" matInput placeholder="1">
-      </mat-form-field>
-        <button mat-raised-button color="secondary">Add to Contract</button>
-		</form>
-		<button mat-raised-button color="primary" (click)="getValues()">Get Values</button>
-		<p *ngIf="message">Message: {{message}}</p>
-</div>
+<div></div>
